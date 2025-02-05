@@ -1,0 +1,32 @@
+#### **Requirements:**  
+1. **Create a dictionary** to store student names as **keys** and their scores as **values**.  
+2. **Use a loop** to allow the user to:  
+   - Add multiple students and their scores.  
+   - Stop adding when they enter `"done"`.  
+3. **After input is complete**, display all students and their scores.  
+
+#### **Bonus Challenges:**  
+✅ Calculate and display the **average score**.  
+✅ Show the **highest and lowest scores**.  
+✅ Sort students by their scores before displaying.  
+
+🔹 **Example Output:**  
+```
+Enter student name (or 'done' to stop): Alice  
+Enter Alice's score: 85  
+
+Enter student name (or 'done' to stop): Bob  
+Enter Bob's score: 92  
+
+Enter student name (or 'done' to stop): done  
+
+Student Scores:  
+Alice - 85  
+Bob - 92  
+
+Average Score: 88.5  
+Highest Score: Bob (92)  
+Lowest Score: Alice (85)  
+```
+
+Try this out, and let me know if you need help! 🚀
