@@ -1,7 +1,7 @@
 studentsNameAndScore = {}
 
 while True:
-    name = input("\nEnter your name of 'done' to stop: ")
+    name = input("\nEnter your name or 'done' to stop: ")
     if name.lower() == 'done':
      break
 
@@ -17,26 +17,27 @@ while True:
         print(f"{name.title()}'s score is {scoreInput}.")
 
     studentsNameAndScore[name] = score
-print(studentsNameAndScore)
 
-
-listOfScores = []
-print("\nStudent score:")
-for student, studentScores in studentsNameAndScore.items():
+if studentsNameAndScore != {}:
+ print("\nStudent score:")
+ for student, studentScores in studentsNameAndScore.items():
    print(f"{student.title()} - {studentScores}")
-
-for student,studentScores in studentsNameAndScore.items():
+ 
+ listOfScores = []
+ for studentScores in studentsNameAndScore.values():
    listOfScores.append(studentScores)
-highestScore = f"{student} ({max(studentsNameAndScore.values())})"
-lowestScore = f"{student} ({min(studentsNameAndScore.values())})"
+   highestScore = max(listOfScores)
+   lowestScore = min(listOfScores)
+   averageScore = sum(listOfScores) / len(listOfScores)
+ print(f"\nAverage score: {averageScore:.2f}")
 
+ for key, value in studentsNameAndScore.items():
+      if value == highestScore:
+        print(f"Highest score: {key.title()} ({highestScore})")
+      if value == lowestScore:
+         print(f"Lowest score: {key.title()} ({lowestScore})")
 
-
-print(f"\nAverage score: {sum(listOfScores)/len(listOfScores)}")
-print(f"Highest score: {highestScore}")
-print(f"Lowest score: {lowestScore}")
-
-
-  
+else:
+   print("Sorry, no data inputed..")
 
    
